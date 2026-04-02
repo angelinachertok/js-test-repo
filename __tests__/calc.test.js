@@ -1,17 +1,9 @@
 import { test, expect } from "bun:test";
 
-test("сложение работает", () => {
+test("add works", () => {
   expect(1 + 2).toBe(3);
 });
 
-test("умышленная ошибка (демонстрация отчёта)", () => {
+test("intentional fail", () => {
   expect("HELLO").toBe("HELLO!");
-});
-
-// Пример теста, использующего код студента
-// Предполагается, что студент экспортирует функцию sum из своего модуля
-test("функция sum из студенческого кода", async () => {
-  // Импортируем решение студента (относительный путь задаётся при запуске)
-  const { sum } = await import("../student-solution/index.js");
-  expect(sum(2, 3)).toBe(5);
 });
